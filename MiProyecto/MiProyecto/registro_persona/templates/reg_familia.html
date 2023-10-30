@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Registrar Familia</h1> 
+<form action="/reg_familia/" method="POST">
+    {%csrf_token%}
+    {{form.as_p}}
+    <button>
+        Guardar
+    </button>
+</form>
+
+{% endblock %}

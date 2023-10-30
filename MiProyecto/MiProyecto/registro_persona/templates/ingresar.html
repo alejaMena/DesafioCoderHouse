@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Ingresar</h1> 
+<p style="color:red;">{{error}}</p>
+<form action="/ingresar/" method="POST">
+    {%csrf_token%}
+    {{form.as_p}}
+    <button>
+        Ingresar
+    </button>
+</form>
+   
+{% endblock %}

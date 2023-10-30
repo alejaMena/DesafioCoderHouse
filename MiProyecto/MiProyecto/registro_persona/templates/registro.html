@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Bienvenido a tu árbol génealogico</h1>
+<p style="color:red;">{{error}}</p>
+<form action="/registro/" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button>
+        Registrarse
+    </button>
+</form>
+{% endblock %}
